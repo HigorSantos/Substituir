@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+		<meta charset="utf-8">
+	    <link rel="stylesheet" href="css/estilos.css"/>
+	    <script type="text/javascript" src="js/sub.min.js"></script>
+    </head>
+    <body>
+    	<div>
+	    	<label for="texto" class="lbl">Digite ou cole o texto:</label>
+	    	<textarea id="texto" placeholder="O texto que quer substituir alguma coisa..."></textarea>
+
+	    	<section id="s_encontrar">
+	    		<label for="encontrar" class="lbl">O que encontrar no texto:</label>
+	    		<input type="text" id="encontrar" placeholder="O que encontrar no texto?" />
+
+	    		<div id="encontrar_mais">
+	    			<a href="#" id="abrir_mais">Encontrar mais de um</a>
+
+	    			<div id="lista_encontrar_mais"></div>
+
+	    			<div id="d_adicionar_encontrar">
+	    				<button id="btnadicionar_encontrar">+1 Encontrar</button>
+	    			</div>
+	    		</div>
+	    	</section>
+
+	    	<section id="sub">
+	    		<label for="encontrar" class="lbl">Substituir com:</label>
+	    		<input type="text" id="substituir" placeholder="Pelo que substituir quando encontrar?" />
+
+				<div id="lista_substituir_mais"></div>
+
+	    		<div>
+		    		<input type="radio" name="substituir_tudo" id="substituir_tudo" value="tudo"><label for="substituir_tudo">Substituir tudo</label>
+		    		<input type="radio" name="substituir_tudo" id="substituir_primeiro" value="primeiro"><label for="substituir_primeiro">Substituir só o primeiro que encontrar</label>
+	    		</div>
+	    	</section>
+
+	    	<section>
+		    	<button id="btnsub">Substituir</button>
+		    	<textarea id="resultado" placeholder="Aqui ficará o resultado do seu texto!" ></textarea>
+		    	
+		    	<label id="mensagem"></label>
+		    	<button id="btnlimpar">Começar de novo</button>
+	    	</section>
+    	</div>
+    </body>
+</html>
