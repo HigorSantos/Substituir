@@ -1,13 +1,15 @@
 {
-"manifest_version": 2,
-"name": "Substituir",
-"description": "Substitua o que quiser de maneira rápida!",
-"version": "0.1.0",
-"icons": {
-	"128": "img/icon-45.png"
-},
-"browser_action":{
-      "default_icon": "img/icon-128.png",
-      "default_popup": "sub.html"
-   }
+	"manifest_version": 2,
+	"default_locale": "en",
+	"name": "Substituir",
+	"description": "Substitua o que quiser de maneira rápida!",
+	"version": "0.1.1",
+	"icons": {
+		"128": "img/icon3-128.png",
+		"512": "img/icon-512.png"
+	},
+	"browser_action":{
+		"default_icon": "img/icon-45.png",
+		"default_popup": "sub.html"
+	}
 }

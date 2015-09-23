@@ -1,7 +1,7 @@
 (function(window,document){
 
 	window.onload = function(){
-
+		
 		/*
 		* Cria os objetos do HTML
 		*/
@@ -18,19 +18,23 @@
 		var btnadicionar_encontrar = document.getElementById('btnadicionar_encontrar');
 		var lista_encontrar_mais = document.getElementById('lista_encontrar_mais');
 		var lista_substituir_mais = document.getElementById('lista_substituir_mais');
-
+		var a_sobre			= document.getElementById('lbl_sobre');
+		var div_inf_sobre	= document.getElementById('inf_sobre');
+		var a_fechar_sobre	= document.getElementById('fechar_sobre');
+		var a_sobre_site_autor = document.getElementById('a_sobre_site_autor');
 		/*
 		* Inicia valores
 		*/
 		rbSubstituir_tudo[0].checked = true;
 		txtTexto.focus();
+		loadI18nMessages();
 
 		/*
 		* Executa a substituição quando clica no botão
 		*/
-		btnSub.onclick = function()
-		{
-			txtResultado.valu = "";
+		btnSub.onclick = function(){
+
+			txtResultado.value = "";
 
 			if(	txtTexto.value!="" && txtTexto.value!=null
 				&& txtEncontrar.value!="" && txtEncontrar.value!=null
@@ -115,7 +119,9 @@
 					var successful = document.execCommand('copy');
 					var msg = successful ? 'sucesso' : 'erro';
 					console.log('Ao copiar o texto tivemos: ' + msg);
-					lblMensagem.innerHTML = "Texto copiado para a Área de Transferência.";
+
+					setProperty('#mensagem','innerText','lbl_copiado_area_transferencia');
+
 				} catch (err) {
 					console.log('Oops, erro ao copiar!');
 				}
@@ -147,14 +153,64 @@
 			if (i_campo<=10){
 				var campo_encontar, campo_substituir;
 
-				campo_encontar = "<input type='text' id='encontrar_"+ i_campo +"' placeholder='Esse é o campo " + i_campo + " do encontrar.' />";
-				campo_substituir = "<input type='text' id='substituir_"+ i_campo +"' placeholder='Esse é o campo de substituir nº" + i_campo + "' />";
+				campo_encontar = "<input type='text' id='encontrar_"+ i_campo +"' placeholder='' />";
+				campo_substituir = "<input type='text' id='substituir_"+ i_campo +"' placeholder='' />";
 
 				lista_encontrar_mais.innerHTML += campo_encontar;
 				lista_substituir_mais.innerHTML += campo_substituir;
 
+				//Carrega o texto do placeholder do i18n
+				setProperty('#encontrar_' + i_campo,'placeholder','txt_encontrar_x_placeholder', i_campo);
+				setProperty('#substituir_' + i_campo,'placeholder','txt_substituir_x_placeholder', i_campo);
+
 				document.getElementById("encontrar_"+ i_campo ).focus();
 			}
+		}
+		
+		/*
+		* Carrega a mensagem do arquivo i18n para um campo
+		 */
+		function setProperty(selector, prop, msg, param) {
+			if (param==null)
+				document.querySelector(selector)[prop] = chrome.i18n.getMessage(msg);
+			else
+				document.querySelector(selector)[prop] = chrome.i18n.getMessage(msg, ""+param);
+		}
+
+		/*
+		* Carrega o texto dos campos do arquivo i18n
+		 */
+		function loadI18nMessages() {
+
+			setProperty('#texto','placeholder','txt_texto_placeholder');
+			setProperty('#lbl_texto','innerText','lbl_texto');
+			setProperty('#lbl_encontrar','innerText','lbl_encontrar');
+			setProperty('#encontrar','placeholder','txt_encontrar_placeholder');
+			setProperty('#abrir_mais','innerText','a_abrir_mais');
+			setProperty('#btnadicionar_encontrar','innerHTML','btn_adicionar_encontrar');
+			setProperty('#lbl_substituir','innerText','lbl_substituir');
+			setProperty('#substituir','placeholder','txt_substituir');
+			setProperty('#lbl_substituir_tudo','innerText','rd_substituir_tudo');
+			setProperty('#lbl_substituir_primeiro','innerText','rd_substituir_primeiro');
+			setProperty('#btnsub','innerHTML','btn_sub');
+			setProperty('#resultado','placeholder','txt_resultado');
+			setProperty('#btnlimpar','innerHTML','btn_limpar');
+
+			setProperty('#lbl_sobre','innerText','lbl_sobre');
+			setProperty('#sobre_autor','innerText','sobre_autor');
+			setProperty('#lbl_fontes_dev','innerText','lbl_fontes_dev');
+			setProperty('#fontes_dev','innerHTML','fontes_dev');
+
+		}
+		
+		a_sobre.onclick = function(){
+			div_inf_sobre.style.display = 'block';
+		}
+		a_fechar_sobre.onclick = function(){
+			div_inf_sobre.style.display = 'none';
+		}
+		a_sobre_site_autor.onclick = function(){
+			chrome.tabs.create({ url: "http://hinfos.com" });
 		}
 
 	}//FIM: onload
@@ -163,4 +219,5 @@
 /*
 Fontes:
 Copiar para área de trabalho: https://github.com/benjamingr/RegExp.escape
+i18n: https://developer.chrome.com/extensions/i18n
 */

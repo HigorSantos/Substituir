@@ -1,0 +1,76 @@
+﻿{
+	"lbl_texto": {
+        "message":"Type or paste your text:"
+	},
+	"txt_texto_placeholder": {
+        "message":"The text you want to replace something."
+	},
+	"lbl_encontrar": {
+        "message":"What find in text:"
+	},
+	"txt_encontrar_placeholder": {
+        "message":"What find in your text?"
+	},
+	"a_abrir_mais": {
+        "message":"Find more then one thing"
+	},
+	"btn_adicionar_encontrar": {
+        "message":"#+1 field to find"
+	},
+	"lbl_substituir": {
+        "message":"Replace with:"
+	},
+	"txt_substituir": {
+        "message":"Replace it with what when finding?"
+	},
+	"rd_substituir_tudo": {
+        "message":"Replace all"
+	},
+	"rd_substituir_primeiro": {
+        "message":"Replace the first match"
+	},
+	"btn_sub": {
+        "message":"Replace!"
+	},
+	"txt_resultado": {
+        "message":"Here you find your text after replace it"
+	},
+	"btn_limpar": {
+        "message":"Clear all fields"
+	},
+	"txt_encontrar_x_placeholder": {
+        "message":"This is the filed $x$ to put something to find",
+		"placeholders": {
+			"x": {
+				"content": "$1",
+				"example": ""
+			}
+        }
+	},
+	"txt_substituir_x_placeholder": {
+        "message":"This is the replace field n# $x$.",
+		"placeholders": {
+			"x": {
+				"content": "$1",
+				"example": ""
+			}
+        }
+	},
+	"lbl_copiado_area_transferencia": {
+        "message":"Text copied to Clipboard."
+	},
+	
+	"lbl_sobre":{
+		"message":"About"
+	},
+	"sobre_autor":{
+		"message":"Author:"
+	},
+	"lbl_fontes_dev":{
+		"message":"Consulted during development:"
+	},
+	"fontes_dev":{
+		"message":"https://github.com/benjamingr/RegExp.escape
+					<br/>https://developer.chrome.com/extensions/"
+	}
+}

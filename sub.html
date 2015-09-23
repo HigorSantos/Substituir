@@ -7,11 +7,11 @@
     </head>
     <body>
     	<div>
-	    	<label for="texto" class="lbl">Digite ou cole o texto:</label>
+	    	<label for="texto" id="lbl_texto" class="lbl">Digite ou cole o texto:</label>
 	    	<textarea id="texto" placeholder="O texto que quer substituir alguma coisa..."></textarea>
 
 	    	<section id="s_encontrar">
-	    		<label for="encontrar" class="lbl">O que encontrar no texto:</label>
+	    		<label for="encontrar" id="lbl_encontrar" class="lbl">O que encontrar no texto:</label>
 	    		<input type="text" id="encontrar" placeholder="O que encontrar no texto?" />
 
 	    		<div id="encontrar_mais">
@@ -26,14 +26,14 @@
 	    	</section>
 
 	    	<section id="sub">
-	    		<label for="encontrar" class="lbl">Substituir com:</label>
+	    		<label for="substituir" id="lbl_substituir" class="lbl">Substituir com:</label>
 	    		<input type="text" id="substituir" placeholder="Pelo que substituir quando encontrar?" />
 
 				<div id="lista_substituir_mais"></div>
 
 	    		<div>
-		    		<input type="radio" name="substituir_tudo" id="substituir_tudo" value="tudo"><label for="substituir_tudo">Substituir tudo</label>
-		    		<input type="radio" name="substituir_tudo" id="substituir_primeiro" value="primeiro"><label for="substituir_primeiro">Substituir só o primeiro que encontrar</label>
+		    		<input type="radio" name="substituir_tudo" id="substituir_tudo" value="tudo"><label id="lbl_substituir_tudo" for="substituir_tudo">Substituir tudo</label>
+		    		<input type="radio" name="substituir_tudo" id="substituir_primeiro" value="primeiro"><label id="lbl_substituir_primeiro" for="substituir_primeiro">Substituir só o primeiro que encontrar</label>
 	    		</div>
 	    	</section>
 
@@ -45,5 +45,16 @@
 		    	<button id="btnlimpar">Começar de novo</button>
 	    	</section>
     	</div>
+		<div id="sobre">
+			<a href="#" id="lbl_sobre">Sobre</a>
+
+			<div id="inf_sobre">
+				<a href="#" id="fechar_sobre">x</a>
+				<label id="sobre_autor" class="h">Autor:</label><label id="sobre_nome_autor">Higor Santos</label>
+				<label id="sobre_site" class="h">Site:</label><a href="http://hinfos.com" id="a_sobre_site_autor">hinfos.com</a>
+				<label id="lbl_fontes_dev" class="h"></label>
+				<div id="fontes_dev"></div>
+			</div>
+		</div>
     </body>
 </html>

@@ -28,17 +28,17 @@ input[type="radio"]{
 }
 
 #btnsub{
-	background: #2980b9;
+	background: #e67e22;
 	border:#bdc3c7 solid 1px;
-	color: #ecf0f1;
+	color: #F5F5F5;
 	width: auto;
 	margin-top: 10px;
 	margin-bottom: 10px;
 }
 #btnlimpar{
-	background: #e67e22;
+	background: #2ecc71;
 	border:#bdc3c7 solid 1px;
-	color: #ecf0f1;
+	color: #F5F5F5;
 	width: auto;
 	margin-top: 10px;
 	margin-bottom: 10px;
@@ -50,7 +50,7 @@ input[type="radio"]{
 	font-size:10pt;
 }
 #s_encontrar a{
-	color: #16a085;
+	color: #c0392b;
 	font-style: italic;
 	margin-bottom: 5px;
 	display: block;
@@ -59,9 +59,9 @@ input[type="radio"]{
 	display: none;
 }
 #btnadicionar_encontrar{
-	background: #27ae60;
+	background: #c0392b;
 	border:#bdc3c7 solid 1px;
-	color: #ecf0f1;
+	color: #F5F5F5;
 	width: auto;
 	padding: 2px 4px;
 }
@@ -70,4 +70,57 @@ input[type="radio"]{
 	color: #34495e;
 	margin-top: 5px;
 	margin-bottom: 5px;
+}
+
+/*
+* ****************
+* Informações app
+* ****************
+*/
+
+#lbl_sobre{
+	display: block;
+	text-align: right;
+}
+#inf_sobre{
+	background: #ecf0f1;
+	display: none;
+	width:60%;
+	height: auto;
+	position: fixed;
+	bottom: 0;
+	right: 0;
+	padding: 10px 0;
+}
+#fechar_sobre{
+	clear: both;
+	width: 100%;
+	display: block;
+	position: fixed;
+	right: 5px;
+	text-align: right;
+	
+}
+#inf_sobre *{
+	margin: 5px;
+}
+#inf_sobre .h{
+	font-weight: bold;
+}
+
+#sobre_autor, #sobre_site{
+	float: left;
+}
+#sobre_nome_autor, #a_sobre_site_autor{
+	clear: right;
+	width: 50%;
+	display: block;
+}
+#a_sobre_site_autor{
+	margin-top: 10px;
+}
+#fontes_dev{
+	font-family: 'Lucida Sans Typewriter', Courier, 'Courier New';
+	font-size: 8pt;
+	overflow: auto;
 }

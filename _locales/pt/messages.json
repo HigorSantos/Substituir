@@ -1,0 +1,77 @@
+﻿{
+	"lbl_texto": {
+        "message":"Digite ou cole o texto:"
+	},
+	"txt_texto_placeholder": {
+        "message":"O texto que quer substituir alguma coisa.."
+	},
+	"lbl_encontrar": {
+        "message":"O que encontrar no texto:"
+	},
+	"txt_encontrar_placeholder": {
+        "message":"O que encontrar no texto?"
+	},
+	"a_abrir_mais": {
+        "message":"Encontrar mais de um"
+	},
+	"btn_adicionar_encontrar": {
+        "message":"+1 Encontrar"
+	},
+	"lbl_substituir": {
+        "message":"Substituir com:"
+	},
+	"txt_substituir": {
+        "message":"Pelo que substituir quando encontrar?"
+	},
+	"rd_substituir_tudo": {
+        "message":"Substituir tudo"
+	},
+	"rd_substituir_primeiro": {
+        "message":"Substituir só o primeiro que encontrar"
+	},
+	"btn_sub": {
+        "message":"Substituir"
+	},
+	"txt_resultado": {
+        "message":"Aqui ficará o resultado do seu texto!"
+	},
+	"btn_limpar": {
+        "message":"Começar de novo"
+	},
+	"txt_encontrar_x_placeholder": {
+        "message":"Esse é o campo $x$ do encontrar.",
+		"placeholders": {
+			"x": {
+				"content": "$1",
+				"example": ""
+			}
+        }
+	},
+	"txt_substituir_x_placeholder": {
+        "message":"Esse é o campo de substituir nº $x$.",
+		"placeholders": {
+			"x": {
+				"content": "$1",
+				"example": ""
+			}
+        }
+	},
+	"lbl_copiado_area_transferencia": {
+        "message":"Texto copiado para a área de Transferência."
+	},
+
+	"lbl_sobre":{
+		"message":"Sobre"
+	},
+	"sobre_autor":{
+		"message":"Autor"
+	},
+	"lbl_fontes_dev":{
+		"message":"Consultados durante o desenvolvimento:"
+	},
+	"fontes_dev":{
+		"message":"https://github.com/benjamingr/RegExp.escape
+					<br/>https://developer.chrome.com/extensions/"
+	}
+
+}
